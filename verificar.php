@@ -1,4 +1,5 @@
 <?php
+	session_start();
 	$login = $_POST["nombre"]; //nombre de campos
 	$clave = $_POST["psw"];
 	
@@ -8,9 +9,10 @@
 	}
 	else
 	{	
-		session_start();
+		
 		$_SESSION["log"]=1; //variable de session, con 1 la sesion esta abierta
-		header("Location: seguro.php"); //session exitosa
+		//header("Location: seguro.php"); //session exitosa
+		echo "usted inicio sesion correctamente";
 	}	
 ?>	
 
